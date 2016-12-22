@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polyomino", "Polyomino\Poly
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Starter", "Starter\Starter.vcxproj", "{624C28D2-5C03-4B32-85BD-17140182983D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Recursive", "Recursive\Recursive.vcxproj", "{46A4A484-20D5-48DD-8A35-60B1051CDDB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{624C28D2-5C03-4B32-85BD-17140182983D}.Release|x64.Build.0 = Release|x64
 		{624C28D2-5C03-4B32-85BD-17140182983D}.Release|x86.ActiveCfg = Release|Win32
 		{624C28D2-5C03-4B32-85BD-17140182983D}.Release|x86.Build.0 = Release|Win32
+		{46A4A484-20D5-48DD-8A35-60B1051CDDB5}.Debug|x64.ActiveCfg = Debug|x64
+		{46A4A484-20D5-48DD-8A35-60B1051CDDB5}.Debug|x64.Build.0 = Debug|x64
+		{46A4A484-20D5-48DD-8A35-60B1051CDDB5}.Debug|x86.ActiveCfg = Debug|Win32
+		{46A4A484-20D5-48DD-8A35-60B1051CDDB5}.Debug|x86.Build.0 = Debug|Win32
+		{46A4A484-20D5-48DD-8A35-60B1051CDDB5}.Release|x64.ActiveCfg = Release|x64
+		{46A4A484-20D5-48DD-8A35-60B1051CDDB5}.Release|x64.Build.0 = Release|x64
+		{46A4A484-20D5-48DD-8A35-60B1051CDDB5}.Release|x86.ActiveCfg = Release|Win32
+		{46A4A484-20D5-48DD-8A35-60B1051CDDB5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

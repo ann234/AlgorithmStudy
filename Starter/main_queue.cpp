@@ -2,9 +2,9 @@
 
 using::std::cout;
 using::std::endl;
+using::std::flush;
 
-#define QUEUE_MAX 10
-
+//Queue를 위한 template Node
 template<typename T>
 struct Node
 {
@@ -13,25 +13,26 @@ struct Node
 	Node<T>* back;
 };
 
+//template queue
 template<typename T>
 class Queue
 {
 private:
+	//현재 원소 개수
 	int count;
 public:
 	Node<T> *head, *tail;
 
 	Queue<T>()
 	{
+		head = NULL;
+		tail = NULL;
 		count = 0;
 	}
 
 	int push_front(T value)
 	{
-		if (count > QUEUE_MAX)
-			return 0;
-
-		Node<T>* n = new Node<T>();
+		Node<T> *n = new Node<T>();
 		n->value = value;
 
 		//첫 push때
@@ -84,12 +85,11 @@ public:
 		}
 		else if (count > 0)
 		{
-			Node<T>* bTail = tail->back;
-			bTail->front = nullptr;
-
 			cout << "pop " << tail->value << endl;
 
-			tail = bTail;
+			Node<T> *node = tail;
+			tail = tail->back;
+			free(node);
 
 			count--;
 			return 1;
@@ -97,12 +97,18 @@ public:
 		else
 			return 0;
 	}
+
+	~Queue()
+	{
+		delete head;
+		delete tail;
+	}
 };
 
 int main(int argc, char* argv[])
 {
 	Queue<int>* q = new Queue<int>();
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 20; i++)
 	{
 		q->push_front(i);
 	}
@@ -112,6 +118,7 @@ int main(int argc, char* argv[])
 	{
 	}
 
+	q->~Queue();
 	getchar();
 
 	return 0;
