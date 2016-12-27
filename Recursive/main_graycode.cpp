@@ -16,8 +16,8 @@ void print_gray_reverse(int code[], int index, int n);
 int main(int argc, char* argv[])
 {
 	//만들 gray code의 bit 설정
-	int* code = new int[4];
-	print_gray(code, 0, 4);
+	int* code = new int[3];
+	print_gray(code, 0, 3);
 }
 
 //(len)bit 하나를 출력한다
